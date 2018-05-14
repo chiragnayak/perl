@@ -28,7 +28,7 @@ my $jira_url ="http://$jira->{jiraserver}\:$jira->{jiraport}";
 my $jirareq = JIRA::REST->new("$jira_url","$jira->{jirauser}","$jira->{jirapass}");
 
 print "Started > ";
-print  DATA "From, To, reported, resolved , difference";
+print  DATA "From, To, reported, resolved , difference \n";
 
 my $count;
 for ($count = 20 ; $count >= 1 ; $count--) {
@@ -99,8 +99,3 @@ sub getData {
 #	my $Type = $issue-> {fields}{issuetype}{name};
 #	print "Key: [$key]  Status: [$status]  FixVersion: [$fixversion]  Summary: [$Summary] Type: [$Type]\n";
 #}
-
-
-
-
-
